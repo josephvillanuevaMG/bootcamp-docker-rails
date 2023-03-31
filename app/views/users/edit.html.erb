@@ -1,0 +1,8 @@
+<h1>Users#edit</h1>
+<p>Find me in app/views/users/edit.html.erb</p>
+<%= form_with model: @user, method: :put, local: true do |form| %>
+  <%= render "basic_inputs", form: form %>
+  <p>
+  <%= form.submit %>
+  </p>
+<% end %>
