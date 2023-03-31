@@ -27,10 +27,10 @@ make up
 
 - In the generated migration file add the ff fields:
   ```
-  t.string firstname
-  t.string lastname
-  t.string username
-  t.string password
+  t.string :firstname
+  t.string :lastname
+  t.string :username
+  t.string :password
   ```
   reference to migration: https://guides.rubyonrails.org/getting_started.html#database-migrations
 
@@ -53,7 +53,8 @@ you can use form_with helper and use User.new as a model. Target the create meth
 ### Bonus
 - Create delete link/button that targets the destroy method in controller. The link can be done this way
 ```
-<%= link_to "Delete User", @user, method: "delete", { confirm: "Are you sure?", disable_with: "Processing..." } %>
+rails 6 and below: <%= link_to "Delete User", @user, method: "delete", { confirm: "Are you sure?", disable_with: "Processing..." } %>
+rails 7: <%= link_to "Delete", user_path(user), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
 ```
 
 - Use partial page for form. name it `_form.html.erb` which can be called in new.html.erb and edit.html.erb. Pass the correct model during render like so
