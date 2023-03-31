@@ -44,9 +44,11 @@ make up
 
 - In New page create a form to which accepts firstname, lastname, username, password as a fields.
 you can use form_with helper and use User.new as a model. Target the create method in controller as the url action.
+  <br> after saving data eg: User.save just redirect to page back to index list. eg: `redirect_back_or_to users_path`
   <br> reference: https://guides.rubyonrails.org/form_helpers.html#binding-a-form-to-an-object
 
 - In Update page same form can be used but use User.find(id) as the model in form_with helper. Target the update method in controller as the url action.
+  <br> after saving data eg: User.save just redirect to page back to index list. eg: `redirect_back_or_to users_path`
 
 ### Bonus
 - Create delete link/button that targets the destroy method in controller. The link can be done this way
