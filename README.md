@@ -27,10 +27,10 @@ make up
 
 - In the generated migration file add the ff fields:
   ```
-  t.string firstname
-  t.string lastname
-  t.string username
-  t.string password
+  t.string :firstname
+  t.string :lastname
+  t.string :username
+  t.string :password
   ```
   reference to migration: https://guides.rubyonrails.org/getting_started.html#database-migrations
 
